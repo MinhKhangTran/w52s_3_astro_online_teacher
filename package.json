@@ -10,7 +10,8 @@
   },
   "devDependencies": {
     "@astrojs/renderer-react": "^0.4.1",
-    "astro": "^0.22.14"
+    "astro": "^0.22.14",
+    "vite-imagetools": "^4.0.3"
   },
   "dependencies": {
     "prettier-plugin-astro": "^0.0.11"
