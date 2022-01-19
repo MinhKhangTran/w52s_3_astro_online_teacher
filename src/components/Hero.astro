@@ -6,7 +6,8 @@ import Button from "./Button.astro";
 <div class="hero_text">
   <h1 class="uppercase h1">Bring your <span>Korean</span> to the next level</h1>
   <p class="body-lg">My goal is to teach you Korean anywhere and anytime</p>
-  <Button text="start learning" variant="primary"><Button/>
+  <Button text="Start learning" variant="primary"><Button/>
+  
 </div>
 <div class="hero_image">
 <!-- Motarboard START -->
@@ -120,10 +121,17 @@ import Button from "./Button.astro";
 </section>
 <style lang="scss">
     #hero{
-        min-height: calc(100vh - 91px);
+        min-height: calc(100vh - 75px);
         align-items:center;
         justify-content: center;
         flex-direction:column;
+        & .hero_text{
+            text-align: center;
+        }
+        & p{
+            --padding-bottom: 1.5rem;
+            padding-block: 1rem var(--padding-bottom);
+        }
         & .hero_image{
             position: relative;
         }
@@ -162,6 +170,13 @@ import Button from "./Button.astro";
         height: calc(100vh - 91px);
         flex-direction:row;
         justify-content: space-between;
+        & .hero_text{
+            text-align: left;
+        }
+        & p{
+            --padding-bottom: 2rem;
+            
+        }
         & .hero_text{
             flex-basis: 50%;
         }
