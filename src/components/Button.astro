@@ -1,0 +1,11 @@
+---
+interface Props {
+  text: string;
+  variant: "primary" | "outline";
+}
+const { text, variant } = Astro.props as Props;
+---
+
+<button>
+  {text}
+</button>

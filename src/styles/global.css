@@ -27,13 +27,11 @@
 }
 
 @media (min-width: 768px) {
-  root {
+  :root {
     /* font-sizes */
-    --h1: 2.25rem;
-    --h2: 1.5rem;
-    --h3: 1.25rem;
-    --body-lg: 1.125rem;
-    --body: 1rem;
+    --h1: 4.5rem;
+    --h2: 3.5rem;
+    --h3: 2rem;
   }
 }
 
@@ -81,7 +79,7 @@ p {
 body {
   font-family: var(--ff-body);
   font-size: var(--body);
-  color: var(--dark);
+  color: var(--text-dark);
   line-height: 1.5;
   background-color: var(--gray);
   /* min-height: 100vh;
@@ -188,8 +186,8 @@ ul {
 .bg-primary {
   background-color: var(--primary);
 }
-.bg-secondary {
-  background-color: var(--secondary);
+.bg-white {
+  background-color: white;
 }
 .bg-primary-light {
   background-color: var(--primary-light);
@@ -204,23 +202,11 @@ ul {
   background-color: var(--light);
 }
 
-.text-primary {
-  color: var(--primary);
-}
-.text-secondary {
-  color: var(--secondary);
-}
-.text-primary-light {
-  color: var(--primary-light);
+.text-dark {
+  color: var(--text-dark);
 }
 .text-gray {
-  color: var(--gray);
-}
-.text-dark {
-  color: var(--dark);
-}
-.text-light {
-  color: var(--light);
+  color: var(--text-gray);
 }
 
 /* typography */

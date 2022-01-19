@@ -1,9 +1,8 @@
 ---
 const navArray = [
   { id: 1, text: "Benefits", url: "#benefits" },
-  { id: 2, text: "Projects", url: "#projects" },
+  { id: 2, text: "Courses", url: "#courses" },
   { id: 3, text: "Testimonials", url: "#testimonials" },
-  { id: 4, text: "Contact", url: "#contact" },
 ];
 ---
 
@@ -11,7 +10,7 @@ const navArray = [
   <nav class="container">
     <div class="nav-header d-flex">
       <a href="/">
-        <img src="/assets/Logo.svg" alt="logo of portfolio" />
+        <img src="/assets/Moony.svg" alt="logo of portfolio" />
       </a>
 
       <section class="navbar-mobile-icon">
@@ -43,7 +42,7 @@ const navArray = [
       {navArray.map((nav) => {
         return (
           <li>
-            <a class={`${nav.id === 4 ? "hr-link" : ""}`} href={nav.url}>
+            <a class="uppercase body-lg" href={nav.url}>
               {nav.text}
             </a>
           </li>
@@ -71,7 +70,8 @@ const navArray = [
 
 <style>
   header {
-    border: solid 1px var(--primary-light);
+    --padding-top: 1rem;
+    padding-top: var(--padding-top);
   }
   .nav-header {
     align-items: center;
@@ -92,7 +92,7 @@ const navArray = [
   .navbar-mobile-icon input[type="button"] {
     border: 0;
     background: transparent;
-    color: var(--primary);
+    color: var(--dark);
     cursor: pointer;
     display: inline-block;
     padding: 1rem 1.5em;
@@ -169,17 +169,13 @@ const navArray = [
   }
   a {
     text-decoration: none;
-    color: var(--dark);
+    color: var(--text-dark);
   }
-  .hr-link {
-    padding-block: 0.5rem;
-    padding-inline: 0.75rem;
-    border: solid 1px var(--primary);
-    color: var(--primary);
-    transition: all 0.3s ease-in;
-    border-radius: 1px;
-  }
+
   @media (min-width: 768px) {
+    header {
+      --padding-top: 2rem;
+    }
     nav {
       display: flex;
       align-items: center;

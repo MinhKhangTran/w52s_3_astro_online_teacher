@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar.astro";
 import Benefits from "../components/Benefits.astro";
 import Courses from "../components/Courses.astro";
 import Testimonial from "../components/Testimonial.astro";
+import AboutMe from "../components/AboutMe.astro";
 import CTA from "../components/CTA.astro";
 import Footer from "../components/Footer.astro";
 
@@ -13,22 +14,23 @@ let description = "Astro Portfolio W52s #3";
 const permalink = Astro.site.href;
 let canonicalURL = Astro.request.canonicalURL;
 ---
-<html lang="en">
-<head>
- <BaseHead {title} {description} {canonicalURL} {permalink} />
 
-</head>
-<body>
+<html lang="en">
+  <head>
+    <BaseHead {title} {description} {canonicalURL} {permalink} />
+  </head>
+  <body>
     <a class="skip-to-content" href="#main-content">Skip to content</a>
     <Navbar />
     <main id="main-content">
       <Hero />
- 
+
       <Benefits />
       <Courses />
       <Testimonial />
+      <AboutMe />
       <CTA />
       <Footer />
     </main>
-</body>
+  </body>
 </html>
