@@ -40,7 +40,7 @@ const benefitsArray = [
             />
           </g>
           <path
-            id="micro-animation"
+            id="micro-animation-pig"
             d="M46.875 37.75C57.2303 37.75 65.625 29.3553 65.625 19C65.625 8.64466 57.2303 0.25 46.875 0.25C36.5197 0.25 28.125 8.64466 28.125 19C28.125 29.3553 36.5197 37.75 46.875 37.75Z"
             fill="url(#paint0_linear_13_65)"
           />
@@ -76,7 +76,7 @@ const benefitsArray = [
         xmlns="http://www.w3.org/2000/svg"
       >
         <g id="002-paint-brush">
-          <g id="micro-animation">
+          <g id="micro-animation-brush">
             <circle
               id="Ellipse 14"
               cx="10"
@@ -257,7 +257,7 @@ const benefitsArray = [
             </g>
           </g>
           <path
-            id="micro-animation"
+            id="micro-animation-progress"
             d="M13 67C15.7614 67 18 64.7614 18 62C18 59.2386 15.7614 57 13 57C10.2386 57 8 59.2386 8 62C8 64.7614 10.2386 67 13 67Z"
             fill="url(#paint0_linear_13_86)"
           />

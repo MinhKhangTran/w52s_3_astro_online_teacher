@@ -37,5 +37,36 @@ let canonicalURL = Astro.request.canonicalURL;
       integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"></script>
+    <script>
+      gsap.set("#micro-animation-pig", { opacity: 0 });
+      const pig = document.querySelector(".benefit_article-1");
+      pig.addEventListener("mouseenter", () => {
+        gsap.fromTo(
+          "#micro-animation-pig",
+          { opacity: 1, y: 0 },
+          { opacity: 0, y: 80, ease: "power.out3" }
+        );
+      });
+
+      const brush = document.querySelector(".benefit_article-2");
+      gsap.set("#micro-animation-brush", { opacity: 0, y: 4 });
+      brush.addEventListener("mouseenter", () => {
+        gsap.fromTo(
+          "#micro-animation-brush",
+          { x: 0, opacity: 1 },
+          { x: 80, opacity: 0, ease: "power.out3" }
+        );
+      });
+
+      const progress = document.querySelector(".benefit_article-3");
+      gsap.set("#micro-animation-progress", { opacity: 0 });
+      progress.addEventListener("mouseenter", () => {
+        gsap.fromTo(
+          "#micro-animation-progress",
+          { x: 0, y: 0, opacity: 1 },
+          { x: 80, y: -45, opacity: 0, ease: "power.out3" }
+        );
+      });
+    </script>
   </body>
 </html>
