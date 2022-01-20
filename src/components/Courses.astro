@@ -1,3 +1,109 @@
-<section>
-Courses
+---
+import Button from "./Button.astro";
+const coursesArray = [
+  {
+    id: 1,
+    img_jpg: "/assets/course-1-min.jpg",
+    img_webp: "/assets/course-1-min.webp",
+    title: "Class for TOPIK Level 3-6",
+    list1: "Learning Korean Writing expressions by topic",
+    list2: "Writing practice and exercises ",
+    list3: "Homework and feedback",
+    price: "9€",
+    stars: "⭐️5",
+  },
+  {
+    id: 2,
+    img_jpg: "/assets/course-2-min.jpg",
+    img_webp: "/assets/course-2-min.webp",
+    title: "Writing Class",
+    list1: "Learning Korean Writing expressions by topic",
+    list2: "Writing practice and exercises ",
+    list3: "Homework and feedback",
+    price: "9€",
+    stars: "⭐️5",
+  },
+  {
+    id: 3,
+    img_jpg: "/assets/course-3-min.jpg",
+    img_webp: "/assets/course-3-min.webp",
+    title: "Korean Class for Children",
+    list1: "Learning Korean Writing expressions by topic",
+    list2: "Writing practice and exercises ",
+    list3: "Homework and feedback",
+    price: "9€",
+    stars: "⭐️5",
+  },
+];
+---
+
+<section id="courses" aria-label="course Section">
+  <h2 class="h2 text-center">My Best-Selling Courses</h2>
+  <div class="d-flex container course_wrapper" style="--gap:1.25rem">
+    {coursesArray.map((course) => {
+      return (
+        <article class="bg-white">
+          <picture>
+            <source srcset={course.img_webp} type="image/webp" />
+            <img src={course.img_jpg} alt={course.title} />
+          </picture>
+          <div class="course_article">
+            <h3 class="">{course.title}</h3>
+            <ul>
+              <li>{course.list1}</li>
+              <li>{course.list2}</li>
+              <li>{course.list3}</li>
+            </ul>
+            <div class="d-flex course_footer">
+              <p>{course.price}</p>
+              <p>{course.stars}</p>
+            </div>
+            <Button text="Book Now" variant="primary"></Button>
+          </div>
+        </article>
+      );
+    })}
+  </div>
 </section>
+
+<style>
+  section {
+    --padding-top: 5rem;
+    margin-top: var(--padding-top);
+  }
+  .course_wrapper {
+    --flex-direction: column;
+    flex-direction: var(--flex-direction);
+  }
+  ul li {
+    list-style-type: "-";
+    margin-left: -2rem;
+  }
+  h3 {
+    font-weight: 500;
+  }
+  article {
+    --mt: 1.5rem;
+    margin-top: var(--mt);
+    border-radius: 8px;
+  }
+  .course_footer {
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  .course_article {
+    padding: 0.875rem;
+  }
+
+  @media (min-width: 850px) {
+    .course_wrapper {
+      --flex-direction: row;
+    }
+    section {
+      --padding-top: 7rem;
+    }
+    article {
+      --mt: 4rem;
+    }
+  }
+</style>
