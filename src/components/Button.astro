@@ -10,15 +10,21 @@ const { text, variant } = Astro.props as Props;
   {text}
 </button>
 
-<style>
+<style lang="scss">
   .btn {
     padding-inline: 1rem;
     padding-block: 0.5rem;
     border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   }
   .primary {
     background: var(--primary);
     border: none;
+    transition: all 0.35s ease-out;
+    &:hover {
+      background: #fbbf24;
+    }
   }
   .outline {
     background: var(--white);
