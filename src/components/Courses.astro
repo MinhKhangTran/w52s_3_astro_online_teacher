@@ -55,7 +55,7 @@ const coursesArray = [
               <li>{course.list3}</li>
             </ul>
             <div class="d-flex course_footer">
-              <p>{course.price}</p>
+              <p class="fw-bold">{course.price}</p>
               <p>{course.stars}</p>
             </div>
             <Button text="Book Now" variant="primary"></Button>
@@ -63,6 +63,9 @@ const coursesArray = [
         </article>
       );
     })}
+  </div>
+  <div class="d-flex button_wrapper">
+    <Button text="See all Courses" variant="outline" />
   </div>
 </section>
 
@@ -94,6 +97,11 @@ const coursesArray = [
   .course_article {
     padding: 0.875rem;
   }
+  .button_wrapper {
+    --pt: 2rem;
+    padding-top: var(--pt);
+    justify-content: center;
+  }
 
   @media (min-width: 850px) {
     .course_wrapper {
@@ -104,6 +112,9 @@ const coursesArray = [
     }
     article {
       --mt: 4rem;
+    }
+    .button_wrapper {
+      --pt: 4rem;
     }
   }
 </style>

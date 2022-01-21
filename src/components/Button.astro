@@ -29,5 +29,9 @@ const { text, variant } = Astro.props as Props;
   .outline {
     background: var(--white);
     border: 1px solid var(--primary);
+    transition: all 0.35s ease-out;
+    &:hover {
+      background: var(--primary);
+    }
   }
 </style>

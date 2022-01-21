@@ -1,3 +1,100 @@
-<section>
-Testimonial
+---
+const testiArray = [
+  {
+    id: 1,
+    img_jpg: "/assets/testi2-min.jpg",
+    img_webp: "/assets/testi2-min.webp",
+    name: "Jane Doe",
+    title: "Student",
+    rating: "⭐️⭐️⭐️⭐️⭐️",
+    text: "ew dog you drink from the toilet, yum yum warm milk hotter pls, ouch too hot have secret plans. Touch my tail, i shred your hand purrrr swipe at owner's legs, bring your owner a dead bird, yet missing until dinner time",
+  },
+  {
+    id: 2,
+    img_jpg: "/assets/testi1-min.jpg",
+    img_webp: "/assets/testi1-min.webp",
+    name: "John Doe",
+    title: "Korean Learner",
+    rating: "⭐️⭐️⭐️⭐️⭐️",
+    text: "Carefully drink from water glass and then spill it everywhere and proceed to lick the puddle favor packaging over toy. Need to chase tail warm up laptop with butt lick butt fart rainbows until owner yells pee in litter box hiss at cats cat walks in keyboard but prow??",
+  },
+  {
+    id: 3,
+    img_jpg: "/assets/testi3-min.jpg",
+    img_webp: "/assets/testi3-min.webp",
+    name: "Peter Shaw",
+    title: "Actor",
+    rating: "⭐️⭐️⭐️⭐️⭐️",
+    text: "so if human is on laptop sit on the keyboard. Lick human with sandpaper tongue your pillow is now my pet bed give me attention or face the wrath of my claws for enslave the hooman yet groom yourself 4 hours - checked",
+  },
+];
+---
+
+<section id="testimonials" aria-label="testimonials Section">
+  <h2 class="h2 text-center">What My Students Said</h2>
+  <div class="d-flex container testi_wrapper" style="--gap:1.25rem">
+    {testiArray.map((testi) => {
+      return (
+        <article class="bg-white">
+          <div class="testi_article">
+            <p class="">{testi.rating}</p>
+            <p class="testi_text text-gray">{testi.text}</p>
+            <div class="d-flex testi_footer">
+              <picture>
+                <source srcset={testi.img_webp} type="image/webp" />
+                <img
+                  width="64"
+                  height="64"
+                  src={testi.img_jpg}
+                  alt={testi.name}
+                />
+              </picture>
+              <div class="testi_footer_text">
+                <p class="fw-bold">{testi.name}</p>
+                <p class="text-gray">{testi.title}</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      );
+    })}
+  </div>
 </section>
+
+<style>
+  section {
+    --padding-top: 5rem;
+    margin-top: var(--padding-top);
+  }
+  .testi_wrapper {
+    --flex-direction: column;
+    flex-direction: var(--flex-direction);
+  }
+  .testi_text {
+    padding-block: 0.5rem 1.5rem;
+  }
+
+  article {
+    --mt: 1.5rem;
+    margin-top: var(--mt);
+    border-radius: 8px;
+  }
+  .testi_footer {
+    align-items: center;
+  }
+  .testi_article {
+    padding: 1.5rem;
+  }
+
+  @media (min-width: 850px) {
+    .testi_wrapper {
+      --flex-direction: row;
+    }
+    section {
+      --padding-top: 7rem;
+    }
+    article {
+      --mt: 4rem;
+    }
+  }
+</style>
