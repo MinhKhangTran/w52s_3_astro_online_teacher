@@ -1,3 +1,49 @@
-<footer>
-Footer
+<footer class="container">
+  <ul class="d-flex">
+    <li>
+      <a href="#benefits" class="uppercase">benefits</a>
+    </li>
+    <li>
+      <a href="#courses" class="uppercase">courses</a>
+    </li>
+    <li>
+      <a href="#testimonials" class="uppercase">testimonials</a>
+    </li>
+    <li>
+      <a href="#about" class="uppercase">About me</a>
+    </li>
+  </ul>
+  <div>
+    <p>2022 © Moony, All rights reserved</p>
+  </div>
 </footer>
+
+<style>
+  ul {
+    --mt: 1.5rem;
+    padding-left: 0;
+    --gap: 1.5rem;
+    margin-top: var(--mt);
+    margin-bottom: var(--mt);
+    flex-wrap: wrap;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  p {
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: #666666;
+  }
+  @media (min-width: 768px) {
+    ul {
+      --mt: 2rem;
+      justify-content: center;
+      --gap: 3rem;
+      margin-top: var(--mt);
+      margin-bottom: 1rem;
+    }
+  }
+</style>

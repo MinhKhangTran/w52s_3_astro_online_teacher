@@ -1,3 +1,53 @@
-<section>
-CTA
+---
+import Button from "./Button.astro";
+---
+
+<section id="cta" aria-label="cta section" class="bg-white">
+<div class="cta_wrapper">
+  <h2 class="h2">Start your first lesson now!</h2>
+  <p class="text-gray">
+    have your beauty sleep 18 hours - checked, be fabulous for the rest of the
+    day - checked. Hunt anything that moves scratch at the door then walk away
+    or lick butt and make a weird face and mewl for food at 4am
+  </p>
+  <Button text="Start learning" variant="primary"><Button/>
+</div>
 </section>
+<style>
+section{
+    border-bottom: 1px solid hsl(32 81% 29% / 0.5);
+}
+ h2{
+        font-weight: 600;
+    }
+    p{
+        --padding-top: 1.5rem;
+        --padding-bottom: 2rem;
+        padding-top: var(--padding-top);
+        padding-bottom: var(--padding-bottom);
+    }
+    .cta_wrapper{
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        max-width: 790px;
+        width: 90%;
+        margin-inline: auto;
+        text-align: center;
+    }
+@media (min-width: 768px){
+  
+    p{
+        --padding-top: 1rem;
+        --padding-bottom: 2rem;
+       
+    }
+    .cta_wrapper{
+        padding-top: 9.375rem;
+        padding-bottom: 9.375rem;
+        max-width: 790px;
+        width: 90%;
+        margin-inline: auto;
+        text-align: center;
+    }
+        }
+</style>
