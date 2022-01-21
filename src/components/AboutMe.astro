@@ -1,1 +1,119 @@
-<section>About Me</section>
+<section id="about" aria-label="About Me section" class="bg-primary-light">
+  <div class="container d-flex">
+    <div class="image_wrapper">
+      <picture>
+        <source srcset="/assets/Moony-min.webp" type="image/webp" />
+        <img
+          class="moony"
+          src="/assets/Moony-min.jpg"
+          alt="a picture of moony"
+        />
+      </picture>
+      <img class="rectangle" src="/assets/Rectangle 8.svg" alt="" />
+      <img class="dots" src="/assets/Group 3.svg" alt="" />
+    </div>
+    <div class="text_wrapper">
+      <div class="wrapper">
+        <span>Nice to meet you.</span>
+        <h2 class="h2">I'm Moony</h2>
+        <p>
+          Run in circles i just saw other cats inside the house and nobody ask
+          me before using my litter box what the heck just happened, something
+          feels fishy, so i heard this rumor where the humans are our owners,
+          pfft, what do they know?!.
+        </p>
+        <p class="pt-2">
+          Walk on car leaving trail of paw prints on hood and windshield.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  #about {
+    --padding-top: 5rem;
+    margin-top: var(--padding-top);
+  }
+  .container {
+    --padding-block: 3.5rem;
+    padding-block: var(--padding-block);
+    flex-direction: column;
+  }
+  .image_wrapper {
+    position: relative;
+
+    .rectangle,
+    .dots {
+      position: absolute;
+    }
+    .rectangle {
+      bottom: -16px;
+      left: 20%;
+    }
+    .dots {
+      right: 21%;
+      top: -24px;
+    }
+    picture {
+      display: flex;
+      justify-content: center;
+    }
+    .moony {
+      width: 320px;
+      z-index: 4;
+      border-radius: 4px;
+    }
+  }
+  .text_wrapper {
+    margin-block: auto;
+    .wrapper {
+      margin-inline: auto;
+    }
+    h2 {
+      padding-block: 0 2rem;
+    }
+    .pt-2 {
+      padding-top: 1rem;
+    }
+  }
+
+  @media (min-width: 850px) {
+    #about {
+      --padding-top: 7rem;
+      margin-top: var(--padding-top);
+    }
+    .container {
+      --padding-block: 5.5rem;
+      padding-block: var(--padding-block);
+      flex-direction: row;
+    }
+    .image_wrapper {
+      flex-basis: 50%;
+      .rectangle {
+        bottom: -24px;
+        left: 17%;
+      }
+      .dots {
+        right: 20%;
+        top: -24px;
+      }
+      .moony {
+        width: 327px;
+      }
+    }
+    .text_wrapper {
+      flex-basis: 50%;
+
+      .wrapper {
+        width: 490px;
+      }
+      h2 {
+        padding-block: 2rem;
+      }
+      .pt-2 {
+        padding-top: 1rem;
+      }
+    }
+  }
+</style>
