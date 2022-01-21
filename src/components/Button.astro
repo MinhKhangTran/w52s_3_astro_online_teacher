@@ -2,11 +2,14 @@
 interface Props {
   text: string;
   variant: "primary" | "outline";
+  klasse: string;
 }
-const { text, variant } = Astro.props as Props;
+const { text, variant, klasse } = Astro.props as Props;
 ---
 
-<button class={`btn ${variant === "primary" ? "primary" : "outline"}`}>
+<button
+  class={`btn ${klasse} ${variant === "primary" ? "primary" : "outline"}`}
+>
   {text}
 </button>
 
